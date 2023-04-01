@@ -26,8 +26,8 @@ RUN apt-get update && apt-get -y install \
 # would be good to present this separately, perhaps the following can
 # get dropped if/when php-imagick is available via apt in the php
 # container.
-RUN pecl install imagick-3.4.4 \
-    && docker-php-ext-enable imagick
+#RUN pecl install imagick-3.4.4 \
+#    && docker-php-ext-enable imagick
 
 # Drop in an assortment of configuration information and the ianseo
 # release.
