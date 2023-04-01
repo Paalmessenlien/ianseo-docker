@@ -4,7 +4,7 @@
 #
 # Copyright (C) 2020 Allan Young
 
-FROM php:7.4.2-apache
+FROM php:8.1-apache
 
 RUN apt-get update && apt-get -y install \
        libfreetype6-dev \
