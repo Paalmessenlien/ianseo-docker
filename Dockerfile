@@ -3,6 +3,15 @@
 # LICENSE.txt for details.
 #
 # Copyright (C) 2020 Allan Young
+# base image
+FROM debian:latest
+
+# clean and update sources
+RUN apt-get clean && apt-get update
+
+# install basic apps
+RUN apt-get install -qy nano
+
 FROM php:8.1-apache
 
 # Update package lists and install required packages
