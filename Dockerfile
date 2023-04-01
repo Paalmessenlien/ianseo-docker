@@ -16,8 +16,10 @@ RUN apt-get update && apt-get -y install \
        vim \
        zip \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
-    && docker-php-ext-install gd mysqli
-
+    && docker-php-ext-install gd mysqli \
+    && pecl install imagick \
+    && docker-php-ext-enable imagick
+    
 # The following is used to get the imagick php extension since
 # php-imagick is not available via apt in the php docker container.
 # Yes, this is another RUN command and another layer but I figured it
